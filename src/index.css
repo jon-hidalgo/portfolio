@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,8 +14,8 @@
   --text-muted: #707070;
   --accent: #37ff8b;
   --accent-blue: #40a9ff;
-  --accent-brown: #e1a369;
-  --accent-purple: #a77bca;
+  --accent-brown: #ffffff;
+  --accent-purple: #ca7bbb;
   --border: #404040;
 }
 
@@ -77,40 +79,125 @@ html {
   border: none;
 }
 
-.nav-minimal {
+.console-nav {
   background: var(--bg-primary);
   border: none;
-  border-bottom: 1px solid var(--border);
 }
 
-.nav-button {
+.console-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+}
+
+.console-tab {
   color: var(--text-secondary);
-  position: relative;
-  border: none;
   background: none;
+  border: none;
+  padding: 2px;
+  margin: 0 1rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
 }
 
-.nav-button:hover:not(.active) {
+.console-tab:hover:not(.active) {
   color: var(--text-primary);
 }
 
-.nav-button.active {
+.console-tab.active {
+  color: var(--text-primary);
+}
+
+.console-tab.active .tab-bracket {
   color: var(--accent);
 }
 
-.nav-button.active::after {
-  content: '••••••••••••••••••••';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  height: 1px;
+.console-tab.active .tab-number {
   color: var(--accent);
-  text-align: center;
-  font-size: 6px;
-  line-height: 1;
-  overflow: hidden;
 }
+
+.console-tab.active .tab-label {
+  color: var(--accent);
+}
+
+.tab-bracket {
+  color: var(--text-muted);
+  font-weight: bold;
+}
+
+.tab-number {
+  color: var(--text-secondary);
+  margin: 0 2px;
+}
+
+.tab-label {
+  color: inherit;
+  margin-left: 4px;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+  background: var(--bg-primary);
+  border-right: 1px solid var(--border);
+}
+
+.sidebar-tab {
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  padding: 12px 16px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar-tab:hover:not(.active) {
+  color: var(--text-primary);
+}
+
+.sidebar-tab.active {
+  color: var(--accent);
+}
+
+.sidebar-tab.active .tab-bracket {
+  color: var(--accent);
+}
+
+.sidebar-tab.active .tab-number {
+  color: var(--accent);
+}
+
+.sidebar-tab.active .tab-label {
+  color: var(--accent);
+}
+
+/* Modern artsy title */
+.main-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  background: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+}
+
 
 .section-title {
   color: var(--text-primary);
