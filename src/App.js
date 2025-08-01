@@ -202,7 +202,15 @@ function App() {
           <div className="section-role">
             <p>Hi, I'm Jon. I spent the last few years as a one-person crew, launching side hustles, building tools and learning every part of the game. The solo ride taught me to move fast, trust my instincts and keep things simple.</p>
             <br/>
-            <p>Now I’m ready to swap the solo grind for a team where shared momentum and honest feedback can push ideas further than I ever could alone. If you value curiosity, clear communication and steady execution, let’s chat.</p>
+            <p>Now I'm ready to swap the solo grind for a team where shared momentum and honest feedback can push ideas further than I ever could alone. If you value curiosity, clear communication and steady execution, <button 
+                onClick={() => setCurrentSection('contact')}
+                className="accent hyperlink cursor-pointer text-scramble"
+                data-text="let's connect"
+                onMouseEnter={handleTextScramble}
+                style={{background: 'none', border: 'none', padding: 0, font: 'inherit'}}
+              >
+                let's connect
+              </button>.</p>
             <br/>
             <p>Oh, and by any means DO NOT turn Light Mode on.</p>
             <br/>
