@@ -8,9 +8,12 @@
   --bg-secondary: #1a1a1a;
   --bg-tertiary: #2a2a2a;
   --text-primary: #f0f0f0;
-  --text-secondary: #b0b0b0;
+  --text-secondary: #a9a9a9;
   --text-muted: #707070;
-  --accent: #00ff41;
+  --accent: #37ff8b;
+  --accent-blue: #40a9ff;
+  --accent-brown: #e1a369;
+  --accent-purple: #a77bca;
   --border: #404040;
 }
 
@@ -115,9 +118,29 @@ html {
 }
 
 .accent { color: var(--accent); }
+.accent-blue { color: var(--accent-blue); }
+.accent-brown { color: var(--accent-brown); }
+.accent-purple { color: var(--accent-purple); }
 .text-primary { color: var(--text-primary); }
 .text-secondary { color: var(--text-secondary); }
 .text-muted { color: var(--text-muted); }
+
+/* Consistent formatting classes */
+.section-title { 
+  font-size: 0.875rem; 
+  font-weight: 500; 
+}
+.section-role { 
+  font-size: 0.875rem; 
+}
+.section-meta { 
+  font-size: 0.875rem; 
+  color: var(--accent); 
+}
+.section-details { 
+  font-size: 0.875rem; 
+  color: var(--text-secondary); 
+}
 
 /* Brutalist text scramble effect */
 .text-scramble {
@@ -127,8 +150,8 @@ html {
 }
 
 .hyperlink {
+  color: var(--accent);
   text-decoration: underline;
-  text-decoration-style: dotted;
   text-decoration-color: var(--accent);
   text-underline-offset: 3px;
 }
