@@ -107,25 +107,11 @@ function App() {
       year: "2024"
     },
     {
-      title: "Distributed Task Queue",
-      url: "https://github.com/jon-hidalgo/task-queue",
-      description: "High-performance task queue system with Redis backend, supporting job scheduling, retries, and horizontal scaling across multiple workers.",
-      tech: "Redis, Python, FastAPI, Docker, Kubernetes",
+      title: "Plane Watcher",
+      url: "https://github.com/jon-hidalgo/plane-watcher",
+      description: "A modern macOS menu bar app that shows you real-time information about planes flying near your current location. It uses the OpenSky Network API to fetch live aircraft data and presents it in a clean, compact, and customizable interface.",
+      tech: "Swift, SwiftUI, Combine, OpenSky Network API",
       year: "2024"
-    },
-    {
-      title: "Real-time Chat Analytics",
-      url: "https://github.com/jon-hidalgo/chat-analytics",
-      description: "Live chat monitoring dashboard with message sentiment analysis, user activity tracking, and interactive data visualizations.",
-      tech: "WebSocket, Node.js, MongoDB, React, Chart.js",
-      year: "2023"
-    },
-    {
-      title: "Infrastructure Monitor",
-      url: "https://github.com/jon-hidalgo/infra-monitor",
-      description: "Cloud infrastructure monitoring solution with custom metrics collection, alerting system, and automated scaling triggers.",
-      tech: "Go, Prometheus, Grafana, AWS CloudWatch, Terraform",
-      year: "2023"
     }
   ];
 
@@ -366,13 +352,13 @@ function App() {
     return (
       <div className="min-h-screen bg-black text-green-400 font-mono p-8">
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-4">
+          <div className="mb-4">
             <span className="accent">jon@portfolio</span>
             <span className="text-muted">:~$ </span>
             <span className="animate-pulse text-secondary">portfolio --init</span>
           </div>
           {bootSequence.map((message, index) => (
-            <div key={index} className="section-role opacity-80 mb-1 boot-message">
+            <div key={index} className="section-role opacity-80 mb-4 boot-message">
               <span className="accent">[{String(index + 1).padStart(2, '0')}]</span> <span className="text-secondary">{message}</span>
             </div>
           ))}
