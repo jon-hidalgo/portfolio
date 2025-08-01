@@ -102,24 +102,28 @@ function App() {
     {
       title: "Fbref Scraper",
       url: "https://github.com/jon-hidalgo/fbref-scraper",
+      description: "Football statistics scraper that extracts player and team data from FBref, with automated data processing and CSV export functionality.",
       tech: "Docker, Python, Requests, BeautifulSoup, Pandas, GitHub",
       year: "2024"
     },
     {
       title: "Distributed Task Queue",
       url: "https://github.com/jon-hidalgo/task-queue",
+      description: "High-performance task queue system with Redis backend, supporting job scheduling, retries, and horizontal scaling across multiple workers.",
       tech: "Redis, Python, FastAPI, Docker, Kubernetes",
       year: "2024"
     },
     {
       title: "Real-time Chat Analytics",
       url: "https://github.com/jon-hidalgo/chat-analytics",
+      description: "Live chat monitoring dashboard with message sentiment analysis, user activity tracking, and interactive data visualizations.",
       tech: "WebSocket, Node.js, MongoDB, React, Chart.js",
       year: "2023"
     },
     {
       title: "Infrastructure Monitor",
       url: "https://github.com/jon-hidalgo/infra-monitor",
+      description: "Cloud infrastructure monitoring solution with custom metrics collection, alerting system, and automated scaling triggers.",
       tech: "Go, Prometheus, Grafana, AWS CloudWatch, Terraform",
       year: "2023"
     }
@@ -266,7 +270,7 @@ function App() {
       {renderPrompt('projects')}
       <div className="space-y-6">
         {projectsData.map((project, index) => (
-          <div key={index} className="space-y-4">
+          <div key={index} className="space-y-2">
             <h3 className="section-title">
               <a 
                 href={project.url} 
@@ -279,6 +283,7 @@ function App() {
                 {project.title}
               </a>
             </h3>
+            <p className="section-role">{project.description}</p>
             <p className="section-details"><span className="accent-brown">&gt;</span> {project.tech}</p>
           </div>
         ))}
@@ -316,7 +321,7 @@ function App() {
             <br />
             <p className="text-secondary">$ cat contact.info</p>
             <div className="section-details">
-              <p><span className="accent-brown">&gt;</span> Email: <a href="mailto:contact@jonhidalgo.dev" target="_blank" rel="noopener noreferrer" className="accent hyperlink text-scramble" data-text="contact@jonhidalgo.dev" onMouseEnter={handleTextScramble}>contact@jonhidalgo.dev</a></p>
+              <p><span className="accent-brown">&gt;</span> Email: <a href="mailto:jonhidalgodev@gmail.com" target="_blank" rel="noopener noreferrer" className="accent hyperlink text-scramble" data-text="jonhidalgodev@gmail.com" onMouseEnter={handleTextScramble}>jonhidalgodev@gmail.com</a></p>
               <p><span className="accent-brown">&gt;</span> Location: Madrid, Spain</p>
               <p><span className="accent-brown">&gt;</span> Status: Available for opportunities</p>
             </div>
@@ -365,14 +370,21 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen font-mono flex flex-col" style={{backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)'}}>
-      <div className="max-w-3xl mx-auto p-6 flex-1 flex flex-col">
-        <header className="mb-8">
+    <div className="h-screen font-mono flex flex-col" style={{backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)'}}>
+      <div className="max-w-3xl mx-auto flex-1 flex flex-col h-full">
+        {/* Fixed Header */}
+        <header className="flex-shrink-0 p-6 pb-4">
           <div className="text-center mb-12">
-            <h1 className="main-title">Jon Hidalgo</h1>
+            <h1 
+              className="main-title text-scramble" 
+              data-text="JON HIDALGO"
+              onMouseEnter={handleTextScramble}
+            >
+              Jon Hidalgo
+            </h1>
           </div>
           
-          <nav className="console-nav mb-6" role="navigation">
+          <nav className="console-nav" role="navigation">
             <div className="console-tabs">
               {Object.entries(sections).map(([key, label], index) => (
                 <button
@@ -391,12 +403,16 @@ function App() {
           </nav>
         </header>
 
-        <main className="card-minimal p-6 flex-1 w-full max-w-none">
-          {renderContent()}
+        {/* Scrollable Main Content */}
+        <main className="card-minimal flex-1 overflow-y-auto px-6">
+          <div className="py-6">
+            {renderContent()}
+          </div>
         </main>
 
-        <footer className="mt-4 text-center text-xs space-y-2">
-          <p className="text-muted">Available for opportunities • <a href="mailto:contact@jonhidalgo.dev" target="_blank" rel="noopener noreferrer" className="accent hyperlink text-scramble" data-text="contact@jonhidalgo.dev" onMouseEnter={handleTextScramble}>contact@jonhidalgo.dev</a></p>
+        {/* Fixed Footer */}
+        <footer className="flex-shrink-0 p-6 pt-4 text-center text-xs space-y-2">
+          <p className="text-muted">Available for opportunities • <a href="mailto:jonhidalgodev@gmail.com" target="_blank" rel="noopener noreferrer" className="accent hyperlink text-scramble" data-text="jonhidalgodev@gmail.com" onMouseEnter={handleTextScramble}>jonhidalgodev@gmail.com</a></p>
           <div className="space-y-1">
             <div className="text-muted">
               <span className="text-secondary">? </span>
