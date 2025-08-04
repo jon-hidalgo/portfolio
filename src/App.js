@@ -378,7 +378,7 @@ function App() {
               data-text="JON HIDALGO"
               onMouseEnter={handleTextScramble}
             >
-              Jon Hid6lgo
+              Jon Hidalgo
             </h1>
           </div>
           
