@@ -39,9 +39,9 @@ Thumbs.db
 .idea/
 *.sublime-workspace
 *.sublime-project
+.claude/
 
 # Others
-portfolio/
 infra/.terraform/
 infra/terraform-provider-aws*
 infra/.terraform.lock.hcl
