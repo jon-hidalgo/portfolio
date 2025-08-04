@@ -99,6 +99,13 @@ function App() {
 
   const projectsData = [
     {
+      title: "This portfolio!",
+      url: "https://github.com/jon-hidalgo/portfolio",
+      description: "A responsive terminal-themed portfolio website with boot sequence animation, text scrambling effects, and interactive navigation. Deployed on AWS with CloudFront CDN and automated CI/CD.",
+      tech: "React, JavaScript, Tailwind CSS, AWS S3, CloudFront, ACM, Terraform, GitHub Actions",
+      year: "2025"
+    },
+    {
       title: "Fbref Scraper",
       url: "https://github.com/jon-hidalgo/fbref-scraper",
       description: "Football statistics scraper that extracts player and team data from FBref, with automated data processing and CSV export functionality.",
