@@ -333,7 +333,7 @@ function App() {
             <br />
             <p className="text-primary">$ ls -la social/</p>
             <div className="section-details">
-              <p><span className="accent-brown">&gt;</span> LinkedIn: <a href="https://linkedin.com/in/jonhidalgo" target="_blank" rel="noopener noreferrer" className="accent hyperlink text-scramble" data-text="linkedin.com/in/jonhidalgo" onMouseEnter={handleTextScramble}>linkedin.com/in/jonhidalgo</a></p>
+              <p><span className="accent-brown">&gt;</span> LinkedIn: <a href="https://www.linkedin.com/in/jon-hidalgo-n%C3%BA%C3%B1ez/" target="_blank" rel="noopener noreferrer" className="accent hyperlink text-scramble" data-text="linkedin.com/in/jon-hidalgo-núñez" onMouseEnter={handleTextScramble}>linkedin.com/in/jon-hidalgo-núñez</a></p>
               <p><span className="accent-brown">&gt;</span> GitHub: <a href="https://github.com/jon-hidalgo" target="_blank" rel="noopener noreferrer" className="accent hyperlink text-scramble" data-text="github.com/jon-hidalgo" onMouseEnter={handleTextScramble}>github.com/jon-hidalgo</a></p>
             </div>
           </div>
