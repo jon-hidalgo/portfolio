@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [currentSection, setCurrentSection] = useState('about');
@@ -6,7 +6,6 @@ function App() {
   const [bootSequence, setBootSequence] = useState([]);
   const [lightModeClicks, setLightModeClicks] = useState(0);
   const [lightModeMessage, setLightModeMessage] = useState('');
-  const mainRef = useRef(null);
 
   const scrambleText = (element, finalText, duration = 1000) => {
     const chars = '!<>-_\\/[]{}—=+*^?#________';
@@ -115,16 +114,16 @@ function App() {
     }
   ];
 
-  const bootMessages = [
-    'Loading system modules...',
-    'Initializing portfolio interface...',
-    'Mounting file systems...',
-    'Starting network services...',
-    'Loading user profile...',
-    'Ready.'
-  ];
-
   useEffect(() => {
+    const bootMessages = [
+      'Loading system modules...',
+      'Initializing portfolio interface...',
+      'Mounting file systems...',
+      'Starting network services...',
+      'Loading user profile...',
+      'Ready.'
+    ];
+
     let messageIndex = 0;
     const bootInterval = setInterval(() => {
       if (messageIndex < bootMessages.length) {
